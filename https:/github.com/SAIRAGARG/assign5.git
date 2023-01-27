@@ -1,0 +1,111 @@
+z=int(input('enter number from 1-9:'))
+
+if z==1:
+    string = input ("Please enter the string\n")
+    length =len(string)
+    print(string[::-1])
+elif z==2:
+    print("Enter Range")
+    start = int(input("from "))
+    end = int(input("to "))
+    list1 = []
+    a = int(input("Enter the number with which you want to check the divisibility\n"))
+    for i in range(start, end + 1):
+        if (i % a == 0):
+            list1.append(i)
+        else:
+            continue
+    print("Numbers in the Range Divisible by the Given Number is/are\n", list1)
+
+elif z==3:
+    import math
+    a = int(input("Enter the first side length\n"))
+    b = int(input("Enter the second side Length\n"))
+    c = int(input("Enter the third side length\n"))
+
+    d = (a + b + c) / 2
+    areasqre = d * (d - a) * (d - b) * (d - c)
+    if (areasqre > 0):
+        print("Area of the triangle is", math.sqrt(areasqre))
+    else:
+        print("Triangle not formed!")
+
+elif z==4:
+    for m in range(5):
+        print(m * '*')
+    for n in range(5, 0, -1):
+        print(n * '*')
+
+elif z==5:
+    asc=ord('A')
+    for i in range(0, 5):
+       for j in range(0, i + 1):
+            char = chr(asc)
+            print(char, end="")
+            asc += 1
+       print()
+
+elif z==6:
+    lv = int(input("Please, Enter the Lowest Range Value: "))
+    uv = int(input("Please, Enter the Upper Range Value: "))
+
+    print("The Prime Numbers in the range are: ")
+    for number in range(lv, uv + 1):
+        if number > 1:
+            for i in range(2, number):
+                if (number % i) == 0:
+                    break
+            else:
+                print(number)
+
+elif z==7:
+    for i in range(1,501):
+        if(i%7==0 and i%11==0):
+            print(i)
+
+elif z==8:
+
+    '''a=int(input('enter number 1: '))
+    b=int(input('enter number 2: '))
+    c=int(input('enter number 3: '))
+    d=int(input('enter number 4: '))
+    e = int(input('enter number 5: '))
+    f = int(input('enter number 6: '))
+    h = int(input('enter number 7: '))
+    i= int(input('enter number 8: '))
+    j = int(input('enter number 9: '))
+    k = int(input('enter number 10: '))'''
+    li = []
+    n = int(input("Enter size of list "))
+    for i in range(0, n):
+        e = int(input("Enter element of list "))
+        li.append(e)
+        a=input('enter subpart:')
+
+        if a==1:
+            print("Positive numbers in", li, "are: ")
+
+            # traversing
+            for i in li:
+                # checking condition
+                if i >= 0:
+                    print(i, end=" ")
+
+
+        elif a==2:
+            # traversing
+            for i in li:
+                # checking condition
+                if i <= 0:
+                    print(i, end=" ")
+
+        elif a==3:
+            for num in li:
+                # checking condition
+                if num % 2 != 0:
+                    print(num, end=" ")
+
+        elif a==4:
+            for num in li:
+                if num % 2 == 0:
+                    print(num, end=" ")
